@@ -17,7 +17,9 @@ Puede acceder a la Wiki mediante el enlace siguiente
 ## Software necesario y sus versiones
 
 *Para este caso hicimos el levantamiento inicial en una maquina Linux con OS Fedora 43*
+Aunque los pasos se pueden replicar para otros sistemas operativos basados en Linux o windows, con su debido cambio
 
+**Versiones de software usado**
 * Docker version 29.6.2 build 1.fc43
 * Docker Compose version 5.3.1
 * Git 2.55.0
@@ -56,12 +58,48 @@ $ npm -v
 ```
 ##### Pasos para obtener el proyecto base y levantarlo
 ```bash
-$ git clone https://github.com/MatiasBV/analisis-y-diseno-de-software.git
-$ cd analisis-y-diseno-de-software/mi-proyecto-node-docker/
+$ git clone https://gitlab.inf.utfsm.cl/inf236-2026-2/inf236-csj-22026-11.git
+$ cd inf236-csj-22026-11/defider_reserva_v1
 $ sudo docker compose up --build
 ```
-en ese paso tuve un leve detalle por el sistema operativo pero se soluciona agregando un :z al final de la linea 16 del archivo *docker-compose.yml*.  
-Luego cerramos el levantamiento
+
+Luego de terminar, para limpiar usamos para apagar el contenedor:
 ```bash
 sudo docker compose down
+```
+
+# Video prototipo Hito 3
+
+El link para acceder al video realizado es el siguiente:
+
+https://youtu.be/Kz91q9Deg4k
+
+**Comandos utiles docker**  
+Levantar el proyecto sin volver a construir las imágenes:
+```bash
+docker compose up
+```
+Levantar el proyecto en segundo plano:
+```bash
+docker compose up -d
+```
+Ver el estado de los servicios que están corriendo:
+```bash
+docker compose ps
+```
+Ver los logs en tiempo real de todos los servicios:
+```bash
+docker compose logs -f
+```
+O de un servicio específico:
+```bash
+docker compose logs -f nombre_servicio
+```
+Reiniciar un servicio específico:
+```bash
+docker compose restart nombre_servicio
+```
+Detener todos los contenedores sin eliminar volúmenes:
+```bash
+docker compose down
 ```
