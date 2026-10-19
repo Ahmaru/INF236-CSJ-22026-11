@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revisar Reservas - DEFIDER</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1 style="text-align: center;">Mis reservas</h1>
+
+    <div class="table-responsive">
+      <table id="tabla-reservas">
+        <thead>
+          <tr>
+            <th>Recurso</th>
+            <th>Fecha</th>
+            <th>Bloque</th>
+            <th>Uso</th>
+            <th>Sede</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-body">
+          <!-- Se completa dinámicamente con JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="/inscripcion-calendarizada" class="btn-back">Añadir</a>
+    </div>
+  </div>
+
+  <script src="revisar-reservas.js"></script>
+</body>
+</html>
